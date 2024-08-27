@@ -1,0 +1,36 @@
+package Presentr;
+
+import Model.Gender;
+import Model.Service;
+import Model.User;
+import Model.Writable;
+
+import java.time.LocalDate;
+
+public class Presenter {
+    private View view;
+    private Service service;
+    private Writable writable;
+
+    public Presenter(View view){
+        this.view = view;
+        service = new Service(writable);
+    }
+
+    public void addUser(int Id, String name, String patronymic, String lastname, Gender gender, LocalDate birthdate, String phoneNumber){
+        service.addUser(new User(Id++,name,patronymic,lastname,gender,birthdate,phoneNumber));
+
+    }
+
+    public void getPoneInfo(){
+        String info = service.getPhoneInfo();
+        view.printAnswer(info);
+    }
+
+
+    public void saveData() {
+    }
+
+    public void read() {
+    }
+}
