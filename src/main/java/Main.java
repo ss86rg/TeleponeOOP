@@ -1,7 +1,7 @@
-import static java.awt.SystemColor.menu;
+import View.View;
+import View.ConcoleUI;
 
-import java.util.ArrayList;
-import java.util.List;
+import static java.awt.SystemColor.menu;
 
 
 public class Main {

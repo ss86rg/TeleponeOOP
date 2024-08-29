@@ -1,7 +1,8 @@
+package Model;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class User   implements  Serializable {
@@ -31,7 +32,7 @@ public class User   implements  Serializable {
     }
 
 
-//    public void add(User user){
+//    public void add(Model.User user){
 //        userlist.add(user);
 //        user.setId(Id++);
 //    }

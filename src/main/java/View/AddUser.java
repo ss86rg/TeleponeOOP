@@ -1,3 +1,5 @@
+package View;
+
 public class AddUser extends Command {
 
         public AddUser(ConcoleUI concoleUI) {

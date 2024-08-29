@@ -1,3 +1,5 @@
+package View;
+
 public class getPhoneInfo extends Command {
 
     public getPhoneInfo(ConcoleUI concoleUI) {
