@@ -1,11 +1,8 @@
-package Model;
-
-import Model.Writable;
-
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Service  implements Serializable {
+public class Service  {
     private int Id;
 
     private Writable writable;
@@ -19,8 +16,6 @@ public class Service  implements Serializable {
     }
 
 
-
-
     public String getPhoneInfo(){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Список контактов:\n");
@@ -28,26 +23,23 @@ public class Service  implements Serializable {
     }
 
 
-
-
-
-
-
-    public void save(String filePath) {
-        filePath = "src/FT.txt";
+    public void save() {
+        String filePath = "src/FT.txt";
 
         writable.save((Serializable) userList, filePath);
+
     }
 
 
-    public void read(String filePath) {
-        filePath = "src/FT.txt";
+
+
+    public void read () {
+        String filePath = "src/FT.txt";
         userList = (List<User>) writable.read(filePath);
 
-
     }
 
-    public void addUser(User user) {
+    public void addUser (User user) {
         userList.add(user);
     }
 }

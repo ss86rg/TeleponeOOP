@@ -1,10 +1,9 @@
-package Model;
-
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User   {
+public class User   implements  Serializable {
     private int Id;
     private String name;
     private String patronymic;
@@ -16,7 +15,7 @@ public class User   {
 
 
 
-    public User(int Id, String name,String patronymic, String lastname,Gender gender,LocalDate birthdate, String phoneNumber) {
+    public User(int Id, String name, String patronymic, String lastname, Gender gender, LocalDate birthdate, String phoneNumber) {
         Id = 0;
         this.name = name;
         this.patronymic = patronymic;
@@ -95,10 +94,7 @@ public class User   {
         this.birthdate = birthdate;
     }
     public void addUser(User user){
-
-
         userlist.add(user);
-
     }
 
     @Override
@@ -125,4 +121,8 @@ public class User   {
                 ", Дата рождения:" + birthdate +
                 ", Номер телефона: " + phoneNumber;
     }
+
+
+
+
 }

@@ -1,6 +1,7 @@
-import View.View;
-
 import static java.awt.SystemColor.menu;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -8,7 +9,6 @@ public class Main {
        View view = new ConcoleUI(menu);
        view.start();
 
-
-
     }
+
 }

@@ -1,9 +1,3 @@
-package View;
-
-import Model.Gender;
-import Presentr.Presenter;
-import View.View;
-
 import java.awt.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -46,8 +40,8 @@ public class ConcoleUI implements View {
             int numCommand = Integer.parseInt(line);
 
             if (checkCommand(numCommand)){
-
                 menu.execute(numCommand);
+
             }
         }
     }
@@ -88,7 +82,8 @@ public class ConcoleUI implements View {
     void saveAndExit() {
 
         presenter.saveData();
-        presenter.read();
+        
+
 
     }
 

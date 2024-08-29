@@ -1,20 +1,15 @@
-package Presentr;
-
-import Model.Gender;
-import Model.Service;
-import Model.User;
-import Model.Writable;
-
 import java.time.LocalDate;
 
 public class Presenter {
     private View view;
     private Service service;
-    private Writable writable;
+
 
     public Presenter(View view){
         this.view = view;
-        service = new Service(writable);
+
+        service = new Service(new FileHandler());
+
     }
 
     public void addUser(int Id, String name, String patronymic, String lastname, Gender gender, LocalDate birthdate, String phoneNumber){
@@ -29,8 +24,14 @@ public class Presenter {
 
 
     public void saveData() {
+        service.save();
     }
 
     public void read() {
+        service.read();
     }
+
+
+
+
 }
