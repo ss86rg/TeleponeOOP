@@ -1,6 +1,7 @@
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class User   implements  Serializable {
@@ -30,11 +31,10 @@ public class User   implements  Serializable {
     }
 
 
-    public void add(User user){
-
-        userlist.add(user);
-        user.setId(Id++);
-    }
+//    public void add(User user){
+//        userlist.add(user);
+//        user.setId(Id++);
+//    }
 
 
 
@@ -112,16 +112,16 @@ public class User   implements  Serializable {
 
     @Override
     public String toString() {
-        return "Абонент:" +
+
+        return "\nАбонент:" +
                 "Id:" + Id +
-                ", Имя" + name  +
+                ", Имя: " + name  +
                 ", Отчество:" + patronymic  +
                 ", Фамилия:" + lastname  +
                 ", пол:" + gender +
                 ", Дата рождения:" + birthdate +
                 ", Номер телефона: " + phoneNumber;
     }
-
 
 
 

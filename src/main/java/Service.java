@@ -1,12 +1,15 @@
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class Service  {
+public class Service implements Iterable<User> {
     private int Id;
 
     private Writable writable;
     private List<User> userList;
+
 
     public Service(Writable writable){
         userList = new ArrayList<>();
@@ -39,7 +42,14 @@ public class Service  {
 
     }
 
-    public void addUser (User user) {
+
+    public void addUser(User user){
         userList.add(user);
+        user.setId(Id++);
+    }
+
+    @Override
+    public Iterator<User> iterator() {
+        return new IteratorUser<>(userList);
     }
 }

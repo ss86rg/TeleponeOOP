@@ -80,11 +80,14 @@ public class ConcoleUI implements View {
 
 
     void saveAndExit() {
-
         presenter.saveData();
-        
+        work = false;
+        System.exit(0);
 
-
+    }
+    void Read () {
+        presenter.read();
+        presenter.getPoneInfo();
     }
 
     public void AddUser(){

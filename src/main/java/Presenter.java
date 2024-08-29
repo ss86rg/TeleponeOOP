@@ -13,7 +13,7 @@ public class Presenter {
     }
 
     public void addUser(int Id, String name, String patronymic, String lastname, Gender gender, LocalDate birthdate, String phoneNumber){
-        service.addUser(new User(Id++,name,patronymic,lastname,gender,birthdate,phoneNumber));
+        service.addUser(new User(Id++, name,  patronymic,  lastname,  gender,  birthdate,  phoneNumber));
 
     }
 
